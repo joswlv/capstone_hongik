@@ -12,6 +12,9 @@ var userSchema = mongoose.Schema({
 
 // create model with mongodb collection & scheme
 var User = mongoose.model('users',userSchema);
+router.get('/',function (req,res) {
+   res.sendfile('./views/mainpage.html');
+});
 router.post('/insert', function(req, res, next) {
     var userid = req.body.userid;
     var sex = req.body.sex;
