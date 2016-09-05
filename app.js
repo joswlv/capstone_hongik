@@ -19,13 +19,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 //mongoose configuration
 
 var mongoose = require('mongoose');
-var db = mongoose.connection;
-db.on('error', console.error);
-db.once('open', function(){
-    // CONNECTED TO MONGODB SERVER
-    console.log("Connected to mongod server");
-});
-mongoose.connect('mongodb://52.79.156.120:27017/booktest');
+mongoose.connect('mongodb://ip_addres:27017/booktest');
 
 var mongo = require('./routes/index.js');
 app.use('/', mongo);
