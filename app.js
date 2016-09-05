@@ -25,7 +25,7 @@ db.once('open', function(){
     // CONNECTED TO MONGODB SERVER
     console.log("Connected to mongod server");
 });
-mongoose.connect('mongodb://52.79.156.120:27017/booktest');
+mongoose.connect('mongodb://localhost:27017/booktest');
 
 var mongo = require('./routes/index.js');
 app.use('/', mongo);
